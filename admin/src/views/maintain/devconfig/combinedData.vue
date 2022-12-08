@@ -19,6 +19,7 @@
         size="mini"
         highlight-current-row
       >
+        <el-table-column label="ID" prop="id"  min-width="30"/>
         <el-table-column label="数据组名称" prop="name"  min-width="150"/>
         <el-table-column label="简介" prop="info" min-width="150"/>
         <el-table-column label="操作" fixed="right" min-width="180">

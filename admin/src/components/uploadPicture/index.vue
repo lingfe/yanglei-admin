@@ -24,7 +24,7 @@
                 >
                   <div slot-scope="{ node, data}" class="custom-tree-node" @click.stop="handleNodeClick(data)">
                     <div>
-                      <span class="custom-tree-node-label" :title="node.label">{{ node.label }}</span>
+                      <span class="custom-tree-node-label" :title="node.label">{{ node.label }}-({{data.id == 10000? 0:data.id}})</span>
                       <span
                         v-if="data.space_property_name"
                         style="font-size: 11px;color: #3889b1"
@@ -100,6 +100,7 @@
               <span class="imagesNo_sp">图片库为空</span>
             </div>
             <div class="conters scrollbarAll" :style="{maxHeight:(!pictureType?'296px':'700px')}">
+              <meta name="referrer" content="no-referrer">
               <div
                 v-for="(item, index) in pictrueList.list"
                 :key="index"
